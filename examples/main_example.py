@@ -80,9 +80,10 @@ if enable_pagination:
         paginationPageSize = st.sidebar.number_input("Page size", value=5, min_value=0, max_value=sample_size)
     st.sidebar.text("___")
 
-df = fetch_data(sample_size)
-##df = {'dfsvg':[1,2],
-##     'fsdfwe': [9,12]}
+##df = fetch_data(sample_size)
+df = pd.DataFrame({'dfsvg':[1,2],'fsdfwe': [9,12]})
+
+
 #Infer basic colDefs from dataframe types
 gb = GridOptionsBuilder.from_dataframe(df)
 
