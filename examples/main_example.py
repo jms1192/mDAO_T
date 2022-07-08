@@ -22,15 +22,21 @@ def fetch_data(samples):
             pd.Timedelta(microseconds=50),
             pd.Timedelta(microseconds=10)
             ])
+    ## my add 
+    
+    data1 = pd.read_csv("data/t1.csv")
+    
     dummy_data = {
-        "date_time_naive":pd.date_range('2021-01-01', periods=samples),
-        "apple":np.random.randint(0,100,samples) / 3.0,
-        "banana":np.random.randint(0,100,samples) / 5.0,
-        "chocolate":np.random.randint(0,100,samples),
-        "group": np.random.choice(['A','B'], size=samples),
-        "date_only":pd.date_range('2020-01-01', periods=samples).date,
-        "timedelta":[next(deltas) for i in range(samples)],
-        "date_tz_aware":pd.date_range('2022-01-01', periods=samples, tz="Asia/Katmandu")
+       "Category": [x['Category'] for x in data1],
+       "Token Amount": [x['Token Amount'] for x in data1]  
+       ## "date_time_naive":pd.date_range('2021-01-01', periods=samples),
+       ## "apple":np.random.randint(0,100,samples) / 3.0,
+       ## "banana":np.random.randint(0,100,samples) / 5.0,
+       ## "chocolate":np.random.randint(0,100,samples),
+       ## "group": np.random.choice(['A','B'], size=samples),
+       ## "date_only":pd.date_range('2020-01-01', periods=samples).date,
+       ## "timedelta":[next(deltas) for i in range(samples)],
+       ## "date_tz_aware":pd.date_range('2022-01-01', periods=samples, tz="Asia/Katmandu")
     }
     return pd.DataFrame(dummy_data)
 
