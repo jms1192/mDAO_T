@@ -29,14 +29,6 @@ def fetch_data(samples):
     dummy_data = {
        "Category": [x['Category'] for x in data1],
        "Token Amount": [x['Token Amount'] for x in data1]  
-       ## "date_time_naive":pd.date_range('2021-01-01', periods=samples),
-       ## "apple":np.random.randint(0,100,samples) / 3.0,
-       ## "banana":np.random.randint(0,100,samples) / 5.0,
-       ## "chocolate":np.random.randint(0,100,samples),
-       ## "group": np.random.choice(['A','B'], size=samples),
-       ## "date_only":pd.date_range('2020-01-01', periods=samples).date,
-       ## "timedelta":[next(deltas) for i in range(samples)],
-       ## "date_tz_aware":pd.date_range('2022-01-01', periods=samples, tz="Asia/Katmandu")
     }
     return pd.DataFrame(dummy_data)
 
