@@ -87,7 +87,7 @@ data1 = pd.read_csv("data/t1.csv")
 ##     "Token Amount": [x['Token Amount'] for x in data1]  
 ##}
 
-data1.to_numpy()
+##data1.to_numpy()
 dict1 = {}
 ##for x in data1:
 ##    dict[x[0]] = x[0:]
