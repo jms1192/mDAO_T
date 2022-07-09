@@ -89,7 +89,8 @@ data1 = pd.read_csv(os.path.join(root, "data/t1.csv"))
 
 data1.to_numpy()
 dict1 = {}
-#for x in data1:
+for x in data1:
+    hi = hi
 #    dict[x[0]] = x[0:]
     
 dict2 = {
