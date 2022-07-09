@@ -85,9 +85,10 @@ data1 = pd.read_csv("data/t1.csv")
 dummy_data = {
     "Category": [x['Category'] for x in data1],
      "Token Amount": [x['Token Amount'] for x in data1]  
-}   
+}
+##type(dummy_data.to_numpy())
 ##df = fetch_data(sample_size)
-df = pd.DataFrame(dummy_data)
+df = data1
 
 
 #Infer basic colDefs from dataframe types
