@@ -22,13 +22,15 @@ def fetch_data(samples):
             pd.Timedelta(microseconds=50),
             pd.Timedelta(microseconds=10)
             ])
-    ## my add 
-    
-    data1 = pd.read_csv("data/t1.csv")
-    
     dummy_data = {
-       "Category": [x['Category'] for x in data1],
-       "Token Amount": [x['Token Amount'] for x in data1]  
+        "date_time_naive":pd.date_range('2021-01-01', periods=samples),
+        "apple":np.random.randint(0,100,samples) / 3.0,
+        "banana":np.random.randint(0,100,samples) / 5.0,
+        "chocolate":np.random.randint(0,100,samples),
+        "group": np.random.choice(['A','B'], size=samples),
+        "date_only":pd.date_range('2020-01-01', periods=samples).date,
+        "timedelta":[next(deltas) for i in range(samples)],
+        "date_tz_aware":pd.date_range('2022-01-01', periods=samples, tz="Asia/Katmandu")
     }
     return pd.DataFrame(dummy_data)
 
@@ -91,8 +93,7 @@ def ch_data(data):
     return dict1
 
 df = pd.DataFrame(ch_data(pd.read_csv(os.path.join(root, "data/t1.csv")))
-### finish first edit                     
-
+### finish first edit  
 
 #Infer basic colDefs from dataframe types
 gb = GridOptionsBuilder.from_dataframe(df)
@@ -207,3 +208,5 @@ with st.spinner("Displaying results..."):
         Ag-Grid documentation can be read [here](https://www.ag-grid.com/documentation)
     """)
     st.write(gridOptions)
+                  
+           
