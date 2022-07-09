@@ -82,15 +82,15 @@ if enable_pagination:
 
 ### make the first edit here 
 data1 = pd.read_csv("data/t1.csv")
-dummy_data = {
-    "Category": [x['Category'] for x in data1],
-     "Token Amount": [x['Token Amount'] for x in data1]  
-}
+##dummy_data = {
+##    "Category": [x['Category'] for x in data1],
+##     "Token Amount": [x['Token Amount'] for x in data1]  
+##}
 
-##data1.to_numpy()
-##dict1 = {}
-##for x in data1:
-##    dict[x[0]] = x[0:]
+data1.to_numpy()
+dict1 = {}
+for x in data1:
+    dict[x[0]] = x[0:]
     
 dict2 = {
     "lol":[1,2,3],
