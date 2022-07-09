@@ -81,7 +81,7 @@ if enable_pagination:
     st.sidebar.text("___")
 
 ### make the first edit here 
-data1 = pd.read_csv("data/t1.csv")
+##data1 = pd.read_csv("data/t1.csv")
 ##dummy_data = {
 ##    "Category": [x['Category'] for x in data1],
 ##     "Token Amount": [x['Token Amount'] for x in data1]  
