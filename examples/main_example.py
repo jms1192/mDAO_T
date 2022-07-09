@@ -98,7 +98,7 @@ dict2 = {
 }
 
 ##df = fetch_data(sample_size)
-df = pd.DataFrame(dict1)
+df = pd.DataFrame(dict2)
 
 
 #Infer basic colDefs from dataframe types
