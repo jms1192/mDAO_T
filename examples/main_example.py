@@ -90,7 +90,7 @@ data1 = pd.read_csv(os.path.join(root, "data/t1.csv"))
 data1.values.tolist()
 dict1 = {}
 for x in data1:
-    dict1[x[0]] = x[0:]
+    dict1[x] = data1[x]
     
 dict2 = {
     "lol":[1,2,3],
