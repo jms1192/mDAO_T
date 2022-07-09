@@ -80,8 +80,14 @@ if enable_pagination:
         paginationPageSize = st.sidebar.number_input("Page size", value=5, min_value=0, max_value=sample_size)
     st.sidebar.text("___")
 
+### make the first edit here 
+data1 = pd.read_csv("data/t1.csv")
+dummy_data = {
+    "Category": [x['Category'] for x in data1],
+     "Token Amount": [x['Token Amount'] for x in data1]  
+}   
 ##df = fetch_data(sample_size)
-df = pd.DataFrame({'dfsvg':[1,2],'fsdfwe': [9,12]})
+df = pd.DataFrame(dummy_data)
 
 
 #Infer basic colDefs from dataframe types
