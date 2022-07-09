@@ -87,10 +87,10 @@ data1 = pd.read_csv(os.path.join(root, "data/t1.csv"))
 ##     "Token Amount": [x['Token Amount'] for x in data1]  
 ##}
 
-##data1.to_numpy()
+data1.to_numpy()
 dict1 = {}
-##for x in data1:
-##    dict[x[0]] = x[0:]
+for x in data1:
+    dict[x[0]] = x[0:]
     
 dict2 = {
     "lol":[1,2,3],
@@ -98,7 +98,7 @@ dict2 = {
 }
 
 ##df = fetch_data(sample_size)
-df = pd.DataFrame(dict2)
+df = pd.DataFrame(dict1)
 
 
 #Infer basic colDefs from dataframe types
