@@ -86,9 +86,15 @@ dummy_data = {
     "Category": [x['Category'] for x in data1],
      "Token Amount": [x['Token Amount'] for x in data1]  
 }
-##type(dummy_data.to_numpy())
+
+data1.to_numpy()
+dict1 = {}
+for x in data1:
+    dict[x[0]] = x[0:]
+    
+
 ##df = fetch_data(sample_size)
-df = data1
+df = dict1
 
 
 #Infer basic colDefs from dataframe types
