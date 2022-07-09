@@ -94,7 +94,7 @@ for x in data1:
     
 
 ##df = fetch_data(sample_size)
-df = dict1
+df = pd.DataFrame(dict1)
 
 
 #Infer basic colDefs from dataframe types
