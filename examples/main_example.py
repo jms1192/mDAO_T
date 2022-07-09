@@ -92,9 +92,13 @@ dict1 = {}
 for x in data1:
     dict[x[0]] = x[0:]
     
+dict2 = {
+    "lol":[1,2,3],
+    "fun":[12,9,2]
+}
 
 ##df = fetch_data(sample_size)
-df = pd.DataFrame(dict1)
+df = pd.DataFrame(dict2)
 
 
 #Infer basic colDefs from dataframe types
